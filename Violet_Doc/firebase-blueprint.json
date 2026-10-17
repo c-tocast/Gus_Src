@@ -1,0 +1,74 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    },
+    "Task": {
+      "title": "Task",
+      "description": "User tasks",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "completed": { "type": "boolean" },
+        "category": { "type": "string" },
+        "priority": { "type": "string" },
+        "dueDate": { "type": "string" },
+        "personId": { "type": "string" },
+        "estimatedMinutes": { "type": "number" },
+        "actualMinutes": { "type": "number" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "title"]
+    },
+    "Setting": {
+      "title": "Setting",
+      "description": "User settings",
+      "type": "object",
+      "properties": {
+        "globalNotificationsEnabled": { "type": "boolean" },
+        "soundEnabled": { "type": "boolean" },
+        "theme": { "type": "string" },
+        "simulatedOffsetMs": { "type": "number" }
+      }
+    },
+    "ChatMessage": {
+      "title": "ChatMessage",
+      "description": "User chat history",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "sender": { "type": "string" },
+        "text": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["id", "sender", "text"]
+    },
+    "Person": {
+      "title": "Person",
+      "description": "Custom contact persons",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "avatar": { "type": "string" }
+      },
+      "required": ["id", "name"]
+    }
+  }
+}
